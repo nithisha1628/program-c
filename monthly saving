@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int months, i;
+    float savings[12], total = 0;
+
+    printf("Enter number of months (max 12): ");
+    scanf("%d", &months);
+
+    for (i = 0; i < months; i++) {
+        printf("Enter savings for month %d: ", i + 1);
+        scanf("%f", &savings[i]);
+        total += savings[i];
+    }
+
+    printf("\n--- Monthly Savings Report ---\n");
+    for (i = 0; i < months; i++) {
+        printf("Month %d: %.2f\n", i + 1, savings[i]);
+    }
+    printf("Total Savings: %.2f\n", total);
+
+    return 0;
+}
