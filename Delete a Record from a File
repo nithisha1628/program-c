@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+struct Student { int id; char name[30]; };
+int main() {
+    FILE *fp, *temp;
+    struct Student s;
+    int delId;
+    fp = fopen("students.dat","rb");
+    temp = fopen("temp.dat","wb");
+    if(fp==NULL) { printf("File not found!\n"); return 1; }
+    printf("Enter ID to delete: ");
+    scanf("%d",&delId);
+    while(fread(&s,sizeof(s),1,fp)) {
+        if(s.id != delId) fwrite(&s,sizeof(s),1,temp);
+    }
+    fclose(fp); fclose(temp);
+    remove("students.dat");
+    rename("temp.dat","students.dat");
+    printf("Record deleted successfully.\n");
+    return 0;
+}
