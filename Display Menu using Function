@@ -1,0 +1,8 @@
+#include <stdio.h>
+void displayMenu() {
+    printf("1. Add\n2. Subtract\n3. Multiply\n4. Divide\n");
+}
+int main() {
+    displayMenu();
+    return 0;
+}
