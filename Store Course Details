@@ -1,0 +1,7 @@
+#include <stdio.h>
+struct Course { int id; char name[30]; int duration; };
+int main() {
+    struct Course c = {1,"B.Tech",4};
+    printf("ID:%d Name:%s Duration:%d years\n", c.id, c.name, c.duration);
+    return 0;
+}
