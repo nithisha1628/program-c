@@ -1,0 +1,7 @@
+#include <stdio.h>
+struct Ticket { int no; char passenger[30]; char destination[30]; float fare; };
+int main() {
+    struct Ticket t = {1001,"Arun","Chennai",250};
+    printf("No:%d Passenger:%s Destination:%s Fare:%.2f\n", t.no, t.passenger, t.destination, t.fare);
+    return 0;
+}
