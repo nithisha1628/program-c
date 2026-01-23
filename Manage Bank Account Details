@@ -1,0 +1,7 @@
+#include <stdio.h>
+struct Bank { int accNo; char name[30]; float balance; };
+int main() {
+    struct Bank b = {12345,"Ravi",10000};
+    printf("AccNo:%d Name:%s Balance:%.2f\n", b.accNo, b.name, b.balance);
+    return 0;
+}
