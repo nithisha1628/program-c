@@ -1,0 +1,7 @@
+#include <stdio.h>
+struct Patient { int id; char name[30]; int age; char disease[30]; };
+int main() {
+    struct Patient p = {1,"Kumar",45,"Fever"};
+    printf("ID:%d Name:%s Age:%d Disease:%s\n", p.id, p.name, p.age, p.disease);
+    return 0;
+}
