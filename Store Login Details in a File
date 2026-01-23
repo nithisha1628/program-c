@@ -1,0 +1,20 @@
+#include <stdio.h>
+struct Login {
+    char username[20];
+    char password[20];
+};
+
+int main() {
+    FILE *fp;
+    struct Login l;
+    fp = fopen("login.dat","wb");
+    if(fp == NULL) { printf("Error opening file!\n"); return 1; }
+
+    printf("Enter username and password: ");
+    scanf("%s %s", l.username, l.password);
+
+    fwrite(&l, sizeof(l), 1, fp);
+    fclose(fp);
+    printf("Login details stored.\n");
+    return 0;
+}
