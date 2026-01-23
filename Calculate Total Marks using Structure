@@ -1,0 +1,8 @@
+#include <stdio.h>
+struct Student { int id; char name[30]; int m1,m2,m3; };
+int main() {
+    struct Student s = {1,"John",80,75,90};
+    int total = s.m1+s.m2+s.m3;
+    printf("ID:%d Name:%s Total:%d\n", s.id, s.name, total);
+    return 0;
+}
