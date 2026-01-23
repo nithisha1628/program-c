@@ -1,0 +1,7 @@
+#include <stdio.h>
+struct Product { int id; char name[30]; float price; };
+int main() {
+    struct Product pr = {101,"Laptop",55000};
+    printf("ID:%d Name:%s Price:%.2f\n", pr.id, pr.name, pr.price);
+    return 0;
+}
