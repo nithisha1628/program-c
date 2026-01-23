@@ -1,0 +1,8 @@
+#include <stdio.h>
+float areaCircle(float r) { return 3.14*r*r; }
+float areaRect(float l, float w) { return l*w; }
+int main() {
+    printf("Circle area = %.2f\n", areaCircle(5));
+    printf("Rectangle area = %.2f\n", areaRect(4,6));
+    return 0;
+}
